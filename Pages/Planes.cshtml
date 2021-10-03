@@ -1,0 +1,32 @@
+@page
+@model MascotaFelizWeb.App.Frontend.Pages.PlanesModel
+@{
+    ViewData["Title"] = "Planes";
+}
+<h1>@ViewData["Title"]</h1><br><br>
+
+<section class="form-register">
+    <h4>Planes de la Veterinaria Mascota Feliz</h4>
+
+    <table class="table">
+
+        <colgroup>
+            <col style="background-color: rgb(184, 210, 245);">
+            <col style="background-color: rgb(169, 237, 237);">
+            <col style="background-color: rgb(255, 255, 255);">
+            <col style="background-color: rgb(169, 237, 237);">
+
+        </colgroup>
+
+
+
+        @foreach (var plan in Model.planes)
+        {
+            <tr>
+                <td>@plan.Bienestar</td>
+                <td>@plan.Elite</td>
+                <td>@plan.Diamante</td>
+            </tr>
+        }
+    </table>
+</section>
